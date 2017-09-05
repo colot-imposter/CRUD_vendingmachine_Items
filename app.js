@@ -26,27 +26,30 @@ app.get('/items', function(req, res) {
       })
     })
 })
-
-app.get('/items', function(req, res) {
-  res.render("new_item")
+app.get('/newItem', function(req,res){
+  res.render('newItem')
 })
 
-app.post('/create_user', function(req, res) {
-
-  const userToCreate = models.User.build({
+app.post('/createItem_form', function(req, res) {
+console.log('req.body.name ', req.body.name);
+console.log('req.body.description ',req.body.description);
+console.log('req.body.price ', req.body.price);
+console.log('eq.body.quantity ', req.body.quantity);
+  const userToCreate = models.Item.build({
     name: req.body.name,
-    email: req.body.email,
-    bio: req.body.bio
+    description: req.body.description,
+    price: req.body.price,
+    quantity: req.body.quantity
   })
   userToCreate.save().then(function() {
-    res.redirect('/users')
+    res.redirect('/items')
   })
 })
 
 
   app.post('/delete_user/:idOfTheUser', function(req, res) {
     console.log('the id is   ' + req.params.idOfTheUser);
-    models.User.destroy({
+    models.Item.destroy({
       where: {
         id: req.params.idOfTheUser
       }

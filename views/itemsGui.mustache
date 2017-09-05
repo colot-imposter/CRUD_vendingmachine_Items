@@ -9,7 +9,7 @@
     <h1>Items to Vend</h1>
 
     <div class="addItemButton">
-      Add a <a href="/newItem">Code Snippet</a>
+      Add a <a href="/newItem">New Item</a>
     </div>
 
       <table>
@@ -22,7 +22,7 @@
       {{#itemsList}}
       <tr>
       <!-- <td><img src="../public/photos/giphy.gif" alt="german-dancing like carlton from fresh house, but better"></td> -->
-      <td><a href='/update_snip/{{dataValues.id}}'>{{dataValues.name}}</a></td>
+      <td><a href='/update_item/{{dataValues.id}}'>{{dataValues.name}}</a></td>
       <td>{{dataValues.description}}</td>
       <td>{{dataValues.quantity}}</td>
       <td>{{dataValues.price}}</td>

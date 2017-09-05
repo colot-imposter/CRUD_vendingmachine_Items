@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create A New Item To Put in the Vender</title>
+    <link rel="stylesheet" href="../public/style/style.css">
+  </head>
+  <body>
+    <h1>Create A New Item To Put in the Vender</h1>
+    <form action="/createItem_form" method="post">
+      Name:<input type="text" name="name" value="{{Name}}">
+      <br>
+      Description: <textarea rows="4" cols="50" name="body" form="createSnip_form" value="{{Description}}" placeholder="Enter Item Description here...">
+</textarea>
+      <br>
+      Quantity:<input type="number" name="notes" value="{{Quantity}}">
+      <br>
+
+      Price:<input type="number" name="notes" value="{{Price}}">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>
