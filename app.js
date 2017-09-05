@@ -24,17 +24,14 @@ app.get('/items', function(req, res) {
       res.render('itemsGui', {
         itemsList: itemsList
       })
-    })
+    console.log('iiiitems', itemsList);})
 })
 app.get('/newItem', function(req,res){
   res.render('newItem')
 })
 
 app.post('/createItem_form', function(req, res) {
-console.log('req.body.name ', req.body.name);
-console.log('req.body.description ',req.body.description);
-console.log('req.body.price ', req.body.price);
-console.log('eq.body.quantity ', req.body.quantity);
+
   const userToCreate = models.Item.build({
     name: req.body.name,
     description: req.body.description,
