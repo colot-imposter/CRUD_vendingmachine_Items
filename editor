@@ -1,0 +1,18 @@
+sequelize model:create --name Snip --attributes 'title:string body:TEXT notes:TEXT language:STRING tags:STRING'
+
+
+title: {
+        type: Sequelize.STRING
+      },
+      body: {
+        type: Sequelize.TEXT
+      },
+      notes: {
+        type: Sequelize.TEXT
+      },
+      language: {
+        type: Sequelize.STRING
+      },
+      tags: {
+        type: Sequelize.STRING
+      },
