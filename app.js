@@ -47,14 +47,14 @@ console.log('eq.body.quantity ', req.body.quantity);
 })
 
 
-  app.post('/delete_user/:idOfTheUser', function(req, res) {
+  app.post('/delete_item/:idOfTheUser', function(req, res) {
     console.log('the id is   ' + req.params.idOfTheUser);
     models.Item.destroy({
       where: {
         id: req.params.idOfTheUser
       }
     }).then(function(){
-      res.redirect('/users')
+      res.redirect('/items')
     })
 
   })
